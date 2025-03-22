@@ -5,6 +5,13 @@ declare const __propDef: {
         ref: string | StorageReference;
         data: Blob | Uint8Array | ArrayBuffer;
         metadata?: UploadMetadata | undefined;
+        children?: import("svelte").Snippet<{
+            task: UploadTask | undefined;
+            snapshot: UploadTaskSnapshot | null;
+            progress: number;
+            ref: StorageReference | null;
+            storage: FirebaseStorage | undefined;
+        }> | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

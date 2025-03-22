@@ -6,5 +6,5 @@ import { type Auth } from "firebase/auth";
  * @returns a store with the current firebase user
  */
 export declare function userStore(auth: Auth, startWith?: null): {
-    subscribe: (this: void, run: import("svelte/store").Subscriber<import("@firebase/auth").User | null>, invalidate?: import("svelte/store").Invalidator<import("@firebase/auth").User | null> | undefined) => import("svelte/store").Unsubscriber;
+    subscribe: (this: void, run: import("svelte/store").Subscriber<import("@firebase/auth").User | null>, invalidate?: (() => void) | undefined) => import("svelte/store").Unsubscriber;
 };

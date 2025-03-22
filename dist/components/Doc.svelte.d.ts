@@ -4,6 +4,11 @@ declare class __sveltets_Render<Data extends DocumentData> {
     props(): {
         ref: string | DocumentReference<Data>;
         startWith?: Data | undefined;
+        children?: import("svelte").Snippet<{
+            data: Data | null;
+            ref: DocumentReference<Data> | null;
+            firestore: Firestore | undefined;
+        }> | undefined;
     };
     events(): {} & {
         [evt: string]: CustomEvent<any>;

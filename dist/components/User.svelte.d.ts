@@ -1,7 +1,11 @@
 import { SvelteComponent } from "svelte";
 import type { User } from "firebase/auth";
 declare const __propDef: {
-    props: Record<string, never>;
+    props: {
+        children?: import("svelte").Snippet<{
+            user: User | null;
+        }> | undefined;
+    };
     events: {
         [evt: string]: CustomEvent<any>;
     };

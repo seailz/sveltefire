@@ -7,7 +7,7 @@ import type { Database } from "firebase/database";
  * @returns a store with realtime updates on individual database nodes.
  */
 export declare function nodeStore<T = any>(rtdb: Database, path: string, startWith?: T): {
-    subscribe: (this: void, run: import("svelte/store").Subscriber<T | null>, invalidate?: import("svelte/store").Invalidator<T | null> | undefined) => import("svelte/store").Unsubscriber;
+    subscribe: (this: void, run: import("svelte/store").Subscriber<T | null>, invalidate?: (() => void) | undefined) => import("svelte/store").Unsubscriber;
     ref: import("@firebase/database").DatabaseReference;
 };
 /**
@@ -17,6 +17,6 @@ export declare function nodeStore<T = any>(rtdb: Database, path: string, startWi
  * @returns a store with realtime updates on lists of nodes.
  */
 export declare function nodeListStore<T = any>(rtdb: Database, path: string, startWith?: T[]): {
-    subscribe: (this: void, run: import("svelte/store").Subscriber<T[]>, invalidate?: import("svelte/store").Invalidator<T[]> | undefined) => import("svelte/store").Unsubscriber;
+    subscribe: (this: void, run: import("svelte/store").Subscriber<T[]>, invalidate?: (() => void) | undefined) => import("svelte/store").Unsubscriber;
     ref: import("@firebase/database").DatabaseReference;
 };

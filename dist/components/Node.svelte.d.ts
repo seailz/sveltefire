@@ -4,6 +4,11 @@ declare const __propDef: {
     props: {
         path: string;
         startWith?: any;
+        children?: import("svelte").Snippet<{
+            data: any;
+            ref: DatabaseReference;
+            rtdb: Database | undefined;
+        }> | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

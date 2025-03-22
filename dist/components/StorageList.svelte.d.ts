@@ -3,6 +3,11 @@ import type { FirebaseStorage, ListResult, StorageReference } from 'firebase/sto
 declare const __propDef: {
     props: {
         ref: string | StorageReference;
+        children?: import("svelte").Snippet<{
+            list: ListResult;
+            ref: StorageReference | null;
+            storage: FirebaseStorage | undefined;
+        }> | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

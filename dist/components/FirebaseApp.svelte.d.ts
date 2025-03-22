@@ -11,6 +11,7 @@ declare const __propDef: {
         auth?: Auth | undefined;
         storage?: FirebaseStorage | undefined;
         analytics?: Analytics | undefined;
+        children?: import("svelte").Snippet<[]> | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
