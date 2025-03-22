@@ -26,7 +26,7 @@
 	],
 	"peerDependencies": {
 		"firebase": "^9.0.0",
-		"svelte": "^4.0.0"
+		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
